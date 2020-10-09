@@ -1,0 +1,43 @@
+input[type="text"],
+select,
+textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+  background-color: #e0e0e0;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  width: 20rem;
+  border: 0.1rem red solid;
+}
+
+button:hover {
+  background-color: #b1b090;
+}
+
+.container {
+  border-radius: 5px;
+  padding: 20px;
+  float: right;
+  width: 50%;
+  padding: 10px;
+  height: 300px;
+  margin-right: 1px;
+}
+textarea {
+  height: 100px;
+}

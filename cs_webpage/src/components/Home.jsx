@@ -4,7 +4,7 @@ import "./Home.css";
 
 function Home() {
   return (
-    <div>
+    <div className="homeDesign">
       <NavSys />
       <h1>Wellcome to BSU Computer Science's Club Official Page</h1>
     </div>

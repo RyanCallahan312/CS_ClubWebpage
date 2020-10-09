@@ -2,8 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import Interactive from "react-interactive";
 import { HashLink as Link } from "react-router-hash-link";
-
 import { About, Event, Contact, NavSys } from "./exporter";
+import "./ScrollingSys.css";
 
 const propTypes = {
   location: PropTypes.object.isRequired,
@@ -16,7 +16,7 @@ function ScrollingSys({ location }) {
   const h3Style = { fontSize: "18px", marginTop: "2.5vh" };
 
   return (
-    <div>
+    <div className="badyDev">
       {/** */}
 
       <section id="About">
@@ -76,25 +76,19 @@ function ScrollingSys({ location }) {
       {/*--------------------------------------------------------------------------------------------------------------------*/}
 
       <section id="Contact">
-        <h2 style={h2Style}>Contact Us</h2>
-        <h3 style={h3Style}>Go to:</h3>
         <ul>
           <li>
             <Interactive as={Link} to="/"></Interactive>
           </li>
           <li>
-            <Interactive
-              as={Link}
-              smooth
-              to={`${location.pathname}#About`}
-            ></Interactive>
+            <Interactive as={Link} smooth to={`${location.pathname}#About`}>
+              About
+            </Interactive>
           </li>
           <li>
-            <Interactive
-              as={Link}
-              smooth
-              to={`${location.pathname}#Event`}
-            ></Interactive>
+            <Interactive as={Link} smooth to={`${location.pathname}#Event`}>
+              Event
+            </Interactive>
           </li>
         </ul>{" "}
         {/** Third ul closed */}
