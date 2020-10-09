@@ -1,9 +1,7 @@
 import React, { Component } from "react";
-import "./Nav_Sys.css";
+import "./NavSys.css";
 
-import "./navSystem.css";
-
-export default class Nav_Sys extends Component {
+export default class NavSys extends Component {
   state = {
     clicked: false,
   };
@@ -13,7 +11,7 @@ export default class Nav_Sys extends Component {
   };
   render() {
     return (
-      <nav>
+      <nav className="navBar">
         <div>
           <div className="hamburger" onClick={this.handleClick}>
             <i className={this.state.clicked ? "close" : "fas fa-bars"}></i>
