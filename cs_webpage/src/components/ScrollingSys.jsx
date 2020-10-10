@@ -2,8 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import Interactive from "react-interactive";
 import { HashLink as Link } from "react-router-hash-link";
-import { About, Event, Contact, NavSys } from "./exporter";
+import { About, Event, Contact } from "./exporter";
 import "./ScrollingSys.css";
+import objectAssign from "object-assign";
 
 const propTypes = {
   location: PropTypes.object.isRequired,
@@ -16,23 +17,27 @@ function ScrollingSys({ location }) {
   const h3Style = { fontSize: "18px", marginTop: "2.5vh" };
 
   return (
-    <div className="badyDev">
-      {/** */}
-
-      <section id="About">
-        <NavSys />
-        <h2 style={h2Style}>About</h2>
+    <div>
+      {/** 
+      <NavSys style={{ visibility: "hidden" }} />
+      */}
+      <section style={objectAssign({ backgroundColor: "#E0E0E0" })} id="About">
         <h3 style={h3Style}>Go to:</h3>
         <ul>
           <li>
-            <Interactive as={Link} to="/"></Interactive>
+            <Interactive as={Link} to="/">
+              {" "}
+              Home
+            </Interactive>
           </li>
           <li>
             <Interactive
               as={Link}
               scroll={(el) => el.scrollIntoView({ behavior: "smooth" })}
               to={`${location.pathname}#Event`}
-            ></Interactive>
+            >
+              Event
+            </Interactive>
           </li>
 
           <li>
@@ -40,7 +45,9 @@ function ScrollingSys({ location }) {
               as={Link}
               scroll={(el) => el.scrollIntoView({ behavior: "smooth" })}
               to={`${location.pathname}#Contact`}
-            ></Interactive>
+            >
+              Contact
+            </Interactive>
           </li>
         </ul>{" "}
         {/** First ul closed */}
@@ -48,26 +55,24 @@ function ScrollingSys({ location }) {
       </section>
       {/*---------------------------------------------------------------------------------*/}
 
-      <section id="Event">
+      <section style={objectAssign({ backgroundColor: "#D0D0D0" })} id="Event">
         <h2 style={h2Style}>Events</h2>
         <h3 style={h3Style}>Go to:</h3>
         <ul>
           <li>
-            <Interactive as={Link} to="/"></Interactive>
+            <Interactive as={Link} to="/">
+              Home
+            </Interactive>
           </li>
           <li>
-            <Interactive
-              as={Link}
-              smooth
-              to={`${location.pathname}#About`}
-            ></Interactive>
+            <Interactive as={Link} smooth to={`${location.pathname}#About`}>
+              About
+            </Interactive>
           </li>
           <li>
-            <Interactive
-              as={Link}
-              smooth
-              to={`${location.pathname}#Contact`}
-            ></Interactive>
+            <Interactive as={Link} smooth to={`${location.pathname}#Contact`}>
+              Contact
+            </Interactive>
           </li>
         </ul>{" "}
         {/** Second ul closed */}
@@ -75,10 +80,16 @@ function ScrollingSys({ location }) {
       </section>
       {/*--------------------------------------------------------------------------------------------------------------------*/}
 
-      <section id="Contact">
+      <section
+        style={objectAssign({ backgroundColor: "#C0C0C0" })}
+        id="Contact"
+      >
+        <h3 style={h3Style}>Go to:</h3>
         <ul>
           <li>
-            <Interactive as={Link} to="/"></Interactive>
+            <Interactive as={Link} to="/">
+              Home
+            </Interactive>
           </li>
           <li>
             <Interactive as={Link} smooth to={`${location.pathname}#About`}>

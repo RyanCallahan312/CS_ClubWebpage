@@ -21,7 +21,7 @@ export default function Contact() {
   return (
     <div className="row">
       <div className="col-md-3">
-        <Image src="/img&vid/BearGrid-1.jpg"></Image>
+        <Image src="/img&vid/BearGrid-2.png"></Image>
       </div>
       <form
         className="container"
