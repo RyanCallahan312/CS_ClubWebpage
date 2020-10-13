@@ -1,26 +1,73 @@
-ul {
+.square {
+  height: 25px;
+  width: 25px;
+  position: relative;
+  right: -10%;
+  top: -40px;
+  transform: rotate(-45deg);
+  cursor: pointer;
+  background-color: #555;
+  animation: roll 3s infinite;
+}
+@keyframes roll {
+  0% {
+    -webkit-transform: perspective(100px) rotateX(0) rotateY(180);
+    transform: perspective(100px) rotateX(0) rotateY(180);
+  }
+
+  100% {
+    -webkit-transform: perspective(100px) rotateX(360) rotateY(90deg);
+    transform: perspective(100px) rotateX(0) rotateY(90deg);
+  }
+}
+
+.arr-left {
+  display: inline-block;
+  padding: 0.7em;
+  box-shadow: 5px 5px 0 2px #777 inset;
+  transform: rotate(-45deg);
+  cursor: pointer;
+}
+.arr-left:hover {
+  box-shadow: 100px 100px 0 5px violet inset;
+}
+
+.square:hover {
+  box-shadow: 100px 100px 0 5px violet inset;
+}
+
+.Ul-off {
+  display: none;
+}
+.Ul-off > li {
+  display: none;
+}
+.Ul-on {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
 }
-li {
+.Ul-on > li {
   float: right;
-  display: block;
-  color: white;
+  display: flex;
   text-align: center;
   padding: 16px;
   text-decoration: none;
 }
-li :hover {
-  background-color: #f5f3f3;
-}
+
 section {
   padding: 2.5vw 3.5vw 5vh 3.5vw;
   box-sizing: border-box;
   height: 100vh;
 }
-
-.navMar {
-  visibility: hidden;
+.Interactive {
+  color: white;
+}
+.triangle-down {
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-top: 50px solid #555;
 }

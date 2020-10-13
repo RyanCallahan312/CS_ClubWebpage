@@ -41,3 +41,23 @@ button:hover {
 textarea {
   height: 100px;
 }
+
+@media screen and (max-width: 768px) {
+  input[type="text"],
+  select,
+  textarea {
+    width: auto; /* Full width */
+    padding: auto; /* Some padding */
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: auto; /* Add a top margin */
+    margin-bottom: auto; /* Bottom margin */
+    resize: auto; /* Allow the user to vertically resize the textarea (not horizontally) */
+    background-color: white;
+    position: relative;
+  }
+}
+Col {
+  visibility: hidden;
+}

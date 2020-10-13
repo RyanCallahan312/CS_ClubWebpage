@@ -24,7 +24,7 @@ export default class NavSys extends Component {
               Home
             </a>
           </li>
-          <li className="tue">
+          <li>
             <a href="/foo#About">About</a>
           </li>
           <li>
